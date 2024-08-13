@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.example.samuraitravel.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
-
+    // メールアドレスでユーザーを検索するメソッド
+    public User findByEmail(String email);
 }
